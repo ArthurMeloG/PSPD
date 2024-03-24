@@ -1,0 +1,9 @@
+version: '3'
+services:
+  pspd:
+    image: javac
+    container_name: pspd-environment
+    volumes:
+      - ./code:/code
+    tty: true
+    stdin_open: true
