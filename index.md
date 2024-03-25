@@ -26,3 +26,8 @@ Itens interessantes encontrados no bin
 | netstat  | Exibe informações sobre conexões de rede    |
 
 
+HTOP
+WHERE
+tmux
+ifconfig
+ping
