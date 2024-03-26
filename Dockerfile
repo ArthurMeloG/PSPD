@@ -14,20 +14,20 @@ RUN set -eux; \
     ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in \
        amd64|x86_64) \
-         ESUM='a381d174001bbc558c8911b952c30c2a4fe6dea78a9ff6a25a2db9ac5e7fd952'; \
-         YML_FILE='8.0/jre/linux/x86_64/index.yml'; \
+         ESUM='7055a291305403c09d9248ba93ba748db390c38de46b38bc4153c1f07731cb75'; \
+         YML_FILE='8.0/sdk/linux/x86_64/index.yml'; \
          ;; \
        ppc64el|ppc64le) \
-         ESUM='7e1ee0174aea6cd2a41a561beb4e9b61b7b1d73bc3b8bf68a7d47c2f6ba7e555'; \
-         YML_FILE='8.0/jre/linux/ppc64le/index.yml'; \
+         ESUM='2aad67a7340e93c4830e04901191d41082329a9390d40ecded124458f6990b95'; \
+         YML_FILE='8.0/sdk/linux/ppc64le/index.yml'; \
          ;; \
        s390) \
-         ESUM='80aed9b6510c2cdc2484435d44d7a50fb744ce4f2ae673fa090eddb222cf66fc'; \
-         YML_FILE='8.0/jre/linux/s390/index.yml'; \
+         ESUM='a6e64697f4d1524444eee27eceaa6d8ce0e26879f8a656148c31661a75f67b4b'; \
+         YML_FILE='8.0/sdk/linux/s390/index.yml'; \
          ;; \
        s390x) \
-         ESUM='e7f5d2623a6932095deb2320b3eaa8fd70cf4131653113eb7ff950e276af1cfb'; \
-         YML_FILE='8.0/jre/linux/s390x/index.yml'; \
+         ESUM='53816ed6e12f44a7466c0e06a2ea9fbee363574febe3747ec612166a0676da1b'; \
+         YML_FILE='8.0/sdk/linux/s390x/index.yml'; \
          ;; \
        *) \
          echo "Unsupported arch: ${ARCH}"; \
@@ -45,5 +45,5 @@ RUN set -eux; \
     rm -f /tmp/ibm-java.tgz;
 
 ENV JAVA_HOME=/opt/ibm/java/jre \
-    PATH=/opt/ibm/java/jre/bin:$PATH \
+    PATH=/opt/ibm/java/bin:$PATH \
     IBM_JAVA_OPTIONS="-XX:+UseContainerSupport"
