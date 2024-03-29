@@ -1,10 +1,11 @@
 FROM ubuntu:22.04
 
 RUN apt-get update \
-    && echo "y" | apt install build-essential \
+    && echo "y" | apt-get install build-essential gdb \
     && echo "y" | apt install iproute2 \
     && echo "y" | apt install htop \
     && echo "y" | apt install ssh \
+    && apt-get install libc6-dev \
     && apt-get install -y --no-install-recommends wget ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
