@@ -1,7 +1,9 @@
 FROM ubuntu:22.04
 
 RUN apt-get update \
+    && echo "y" | uniminize \
     && echo "y" | apt install build-essential \
+    && echo "y" | apt-get install gdb \
     && echo "y" | apt install iproute2 \
     && echo "y" | apt install htop \
     && echo "y" | apt install ssh \

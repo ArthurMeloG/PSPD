@@ -31,3 +31,6 @@ WHERE
 tmux
 ifconfig
 ping
+
+
+ cat /proc/cpuinfo | grep processor
