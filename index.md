@@ -31,6 +31,22 @@ WHERE
 tmux
 ifconfig
 ping
-
-
  cat /proc/cpuinfo | grep processor
+whereis
+ls -la
+readlink -f
+vim
+source
+echo
+ps
+rpcinfo
+nano
+
+como ativar processos ?
+
+
+service ssh start
+ssh-keygen -t rsa
+ssh-copy-id -i /root/.ssh/id_rsa.pub root@localhost
+
+
